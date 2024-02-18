@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Data {
     public static void LoadObjects(){
-        Book b1 = new Book.BookBuilder().setISBN(1).setAvailability("Available").setGenere("Genere1").setTitle("Title32").setAuthor("Utkarsh ").Build();
-        Book b2 = new Book.BookBuilder().setISBN(2).setAvailability("Unavailable").setGenere("Genere1").setTitle("Title32").setAuthor("Utkarsh ").Build();
+        Book b1 = new Book.BookBuilder().setISBN(1).setAvailability("Available").setGenre("Genere1").setTitle("Title32").setAuthor("Utkarsh ").Build();
+        Book b2 = new Book.BookBuilder().setISBN(2).setAvailability("Unavailable").setGenre("Genere1").setTitle("Title32").setAuthor("Utkarsh ").Build();
         Book b3 = new Book.BookBuilder().setISBN(978200).setAvailability("Available").setTitle("To Kill a Mockingbird").setAuthor("Harper Lee").Build();
         Book b4 = new Book.BookBuilder().setISBN(978079).setAvailability("Available").setTitle("The Great Gatsby").setAuthor("F. Scott Fitzgerald").Build();
         Book b5 = new Book.BookBuilder().setISBN(195630).setAvailability("Unavailable").setTitle("Pride and Prejudice").setAuthor("Jane Austen").Build();

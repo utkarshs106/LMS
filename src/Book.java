@@ -2,19 +2,18 @@ public class Book implements BookInterface{
     // Here we are using Builder Design Pattern
     private int ISBN;
     private String Title;
-    private String Aurthur;
-    private String Genere;
-    private String Availablity;
+    private String Author;
+    private String Genre;
+    private String Availability;
 
-    @Override
+
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
     }
-    @Override
+
     public int getISBN() {
         return this.ISBN;
     }
-    @Override
     public void setTitle(String Title) {
         this.Title = Title;
     }
@@ -23,34 +22,34 @@ public class Book implements BookInterface{
         return this.Title;
     }
     @Override
-    public void setAuthor(String Author) {
-        this.Aurthur = Author;
+    public void setAuthor(String Authur) {
+        this.Author = Authur;
     }
     @Override
     public String getAuthor() {
-        return this.Aurthur;
+        return this.Author;
     }
     @Override
     public void setGenre(String Genre) {
-        this.Genere = Genre;
+        this.Genre = Genre;
     }
     @Override
     public String getGenre() {
-        return this.Genere;
+        return this.Genre;
     }
     @Override
     public void setAvailability(String Availablity) {
-        this.Availablity = Availablity;
+        this.Availability = Availablity;
     }
     @Override
     public String getAvailability() {
-        return this.Availablity;
+        return this.Availability;
     }
     private Book(BookBuilder Book){
         // This is constructor which sets the attribute in this object from Book object
         this.setISBN(Book.ISBN);
-        this.setAuthor(Book.Aurthur);
-        this.setGenre(Book.Genere);
+        this.setAuthor(Book.Authur);
+        this.setGenre(Book.Genre);
         this.setAvailability(Book.Availablity);
         this.setTitle(Book.Title);
     }
@@ -58,8 +57,8 @@ public class Book implements BookInterface{
     public static class BookBuilder{
         private int ISBN;
         private String Title;
-        private String Aurthur;
-        private String Genere;
+        private String Authur;
+        private String Genre;
         private String Availablity;
 
         BookBuilder setISBN(int ISBN){
@@ -67,15 +66,15 @@ public class Book implements BookInterface{
             return this;
         }
         BookBuilder setAuthor(String Author){
-            this.Aurthur = Author;
+            this.Authur = Author;
             return this;
         }
         public BookBuilder setTitle(String Title){
             this.Title = Title;
             return this;
         }
-        public BookBuilder setGenere(String Genere){
-            this.Genere = Genere;
+        public BookBuilder setGenre(String Genre){
+            this.Genre = Genre;
             return this;
         }
         public BookBuilder setAvailability(String Availability){

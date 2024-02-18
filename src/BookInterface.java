@@ -1,13 +1,13 @@
 public interface BookInterface {
-    void setISBN(int ISBN);
-    int getISBN();
-    void setTitle(String Title);
-    String getTitle();
-    void setAuthor(String Author);
-    String getAuthor();
-    void setGenre(String Genre);
-    String getGenre();
-    void setAvailability(String Availablity);
 
-    String getAvailability();
+    public void setISBN(int ISBN) ;
+    public int getISBN() ;
+    public void setTitle(String Title) ;
+    public String getTitle();
+    public void setAuthor(String Author) ;
+    public String getAuthor();
+    public void setGenre(String Genre) ;
+    public String getGenre();
+    public void setAvailability(String Availablity);
+    public String getAvailability();
 }
