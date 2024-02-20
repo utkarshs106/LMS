@@ -10,14 +10,17 @@ public class Patreon {
     private String MembershipStatus;
     private String PType;
 
-    Patreon(PatreonBuilder p1){
-        this.PID = p1.PID;
-        this.PName = p1.PName;
-        this.PType = p1.PType;
-        this.UserName = p1.UserName;
-        this.Password = p1.Password;
-        this.MembershipStatus = p1.MembershipStatus;
+    Patreon (int PID,String PName,String UserName,String Password,int Amount,String MemberShipStatus){
+        this.PID = PID;
+        this.PName=PName;
+        this.UserName=UserName;
+        this.Password=Password;
+        this.Amount=Amount;
+        this.MembershipStatus=MemberShipStatus;
+
     }
+
+
 
     void setPID(int PID){
         this.PID = PID;
@@ -71,43 +74,10 @@ public class Patreon {
     ArrayList<Integer> getBookList(){
         return this.BookList;
     }
-    static class PatreonBuilder{
-        private int PID;
-        private String PName;
-        private String UserName;
-        private String Password;
-        private int Amount;
-        ArrayList<Integer> BookList= new ArrayList<Integer>();
-        private String MembershipStatus;
-        private String PType;
 
-        PatreonBuilder setPID(int PID){
-            this.PID = PID;
-            return this;
-        }
-        PatreonBuilder setPName(String PName){
-            this.PName = PName;
-            return  this;
-        }
-        PatreonBuilder setPassword(String Password){
-            this.Password = Password;
-            return this;
-        }
-        PatreonBuilder setUserName(String UserName){
-            this.UserName = UserName;
-            return this;
-        }
-        PatreonBuilder setMembershipStatus(String MembershipStatus){
-            this.MembershipStatus = MembershipStatus;
-            return this;
-        }
-        PatreonBuilder setPType(String Ptype){
-            this.PType = Ptype;
-            return this;
-        }
-        Patreon Build(){
-            return new Patreon(this);
-        }
+    Patreon cloneObj(){
+        return new Patreon(PID,PName,UserName,Password,Amount,MembershipStatus);
     }
+
 
 }
